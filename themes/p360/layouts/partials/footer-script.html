@@ -1,0 +1,3 @@
+{{ $footerScript := resources.Get "js/footer-script.js" | js.Build  | minify | fingerprint -}}
+
+<script src="{{ $footerScript.RelPermalink }}"></script>

@@ -1,0 +1,10 @@
+<footer class="footer">
+  <ul class="footer-menu">
+    {{ $currentPage := . }}
+      {{ range .Site.Menus.footer }}
+        <li {{ if $currentPage.IsMenuCurrent "footer" . }}class="active"{{ end }}>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+  </ul>
+</footer>

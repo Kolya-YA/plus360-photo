@@ -1,0 +1,74 @@
+baseURL = "http://plus360.eu/"
+languageCode = "en-us"
+title = "plus360"
+theme = "p360"
+
+[menu]
+
+  [[menu.buro]]
+    name = "Team"
+    weight = 70
+    url = "#"
+    identifier = "team"
+  [[menu.buro]]
+    name = "Jobs"
+    weight = 80
+    url = "#"
+    identifier = "jobs"
+  [[menu.buro]]
+    name = "Contacts"
+    weight = 90
+    url = "#"
+    identifier = "contacts"
+  
+  [[menu.portfolio]]
+    name = "Street view"
+    weight = 40
+    url= "#"
+    identifier = "street_view"
+  [[menu.portfolio]]
+    name = "Virtual tours"
+    weight = 60
+    url= "#"
+    identifier = "virtual_tours"
+  [[menu.portfolio]]
+    name = "Cities"
+    weight = 80
+    url= "#"
+    identifier = "cities"
+  [[menu.portfolio]]
+    name = "Points"
+    weight = 100
+    url= "#"
+    identifier = "poi"
+  [[menu.portfolio]]
+    name = "All"
+    weight = 120
+    url= "#"
+    identifier = "portfolio"
+  
+  [[menu.footer]]
+    name = "Footer1"
+    weight = 40
+    url= "#"
+    identifier = "footer1"
+  [[menu.footer]]
+    name = "Footer2"
+    weight = 60
+    url= "#"
+    identifier = "footer2"
+  [[menu.footer]]
+    name = "Impressum"
+    weight = 80
+    url= "#"
+    identifier = "impressum"
+  [[menu.footer]]
+    name = "Datenschutz"
+    weight = 100
+    url= "#"
+    identifier = "datenschutz"
+  [[menu.footer]]
+    name = "Kontakt"
+    weight = 120
+    url= "#"
+    identifier = "kontakt"

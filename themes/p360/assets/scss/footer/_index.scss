@@ -1,0 +1,28 @@
+.footer {
+  font-family: var(--footer-font-family);
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-menu a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-main-color);
+  text-transform: uppercase;
+  padding: .5em;
+}
