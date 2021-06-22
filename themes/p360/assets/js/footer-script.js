@@ -1,5 +1,6 @@
 
 const twinTopMenu = () => {
+  const headerBlock = document.querySelector('.header-top')
   const headerTopMenu = document.querySelectorAll('.header-top > a')
   const [topPortfolio, topLogo, topBuro] = headerTopMenu
   
@@ -15,10 +16,15 @@ const twinTopMenu = () => {
     portfolioMenu.classList.add('header-bottom__portfoulo-menu--hidden')
     buroMenu.classList.add('header-bottom__buro-menu--hidden')
   })
-
+  
   topBuro.addEventListener('click', () => {
     portfolioMenu.classList.add('header-bottom__portfoulo-menu--hidden')
     buroMenu.classList.remove('header-bottom__buro-menu--hidden')
+  })
+  
+  headerBlock.addEventListener('mouseleave', () => {
+    portfolioMenu.classList.add('header-bottom__portfoulo-menu--hidden')
+    buroMenu.classList.add('header-bottom__buro-menu--hidden')
   })
 }
 
