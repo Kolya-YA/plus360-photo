@@ -1,3 +1,19 @@
+// import * as PanoViewer from './view360.panoviewer.pkgd.min.js'
+// import { PanoViewer } from './view360.panoviewer.pkgd.min.js'
+
+// const loadPano = () => {
+  // const container = document.getElementById("testPano")
+  // var panoViewer = new PanoViewer(container,{
+  //   projectionType: "equirectangular",
+  //   image: "https://naver.github.io/egjs-view360/examples/img/equi.jpg"
+  // });
+
+// PanoControls.init(document.querySelector(".viewer"), panoViewer);
+// PanoControls.showLoading();
+// }
+// console.log(PanoViewer)
+
+// loadPano()
 
 const twinTopMenu = () => {
   const headerBlock = document.querySelector('.header-top')
