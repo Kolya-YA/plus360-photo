@@ -1,5 +1,12 @@
 <footer class="footer">
-  <ul class="footer-menu">
+  <div class="footer__top">
+      <a class="footer__logo" href="{{ .Site.BaseURL }}">
+        <span>{{ .Site.Params.titleWord }}</span>{{ .Site.Params.titleDigit }}
+      </a>
+      <a href="mailto:{{ .Site.Params.email }}?subject=Question from site plus360"  target="_blank">{{ .Site.Params.email }}</a>
+      <a href="tel:{{ .Site.Params.phoneLink }}" target="_blank">{{ .Site.Params.phone }}</a>
+  </div>
+  <ul class="footer__menu">
     {{ $currentPage := . }}
       {{ range .Site.Menus.footer }}
         <li {{ if $currentPage.IsMenuCurrent "footer" . }}class="active"{{ end }}>

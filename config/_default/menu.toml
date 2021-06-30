@@ -1,0 +1,77 @@
+[[top]]
+  name = "Portfolio"
+  weight = 70
+  url = "#"
+  identifier = "portfolio"
+[[top]]
+  name = "Services"
+  weight = 80
+  url = "#"
+  identifier = "services"
+[[top]]
+  name = "FAQ"
+  weight = 90
+  url = "#"
+  identifier = "faq"
+[[top]]
+  name = "Price"
+  weight = 100
+  url = "#"
+  identifier = "price"
+[[top]]
+  name = "Contact"
+  weight = 110
+  url = "#"
+  identifier = "contact"
+
+[[portfolio]]
+  name = "Street view"
+  weight = 40
+  url= "#"
+  identifier = "street_view"
+[[portfolio]]
+  name = "Virtual tours"
+  weight = 60
+  url= "#"
+  identifier = "virtual_tours"
+[[portfolio]]
+  name = "Cities"
+  weight = 80
+  url= "#"
+  identifier = "cities"
+[[portfolio]]
+  name = "Points"
+  weight = 100
+  url= "#"
+  identifier = "poi"
+[[portfolio]]
+  name = "All"
+  weight = 120
+  url= "#"
+  identifier = "all"
+
+[[footer]]
+  name = "Impressum"
+  weight = 60
+  url= "#"
+  identifier = "impressum"
+[[footer]]
+  name = "AGB"
+  weight = 80
+  url= "#"
+  identifier = "agb"
+[[footer]]
+  name = "Datenschutz"
+  weight = 100
+  url= "#"
+  identifier = "datenschutz"
+[[footer]]
+  name = "Jobs"
+  weight = 110
+  url= "#"
+  identifier = "jobs"
+[[footer]]
+  name = "Kontakt"
+  weight = 120
+  url= "#"
+  identifier = "kontakt"
