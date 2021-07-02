@@ -8,7 +8,7 @@
   align-items: center;
   margin-bottom: 1em;
 
-  @media (min-width:  550px) {
+  @media (min-width:  $footer-dskt-width) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -22,7 +22,7 @@
   .footer__logo {
     font-size: 1.3em;
 
-    @media (min-width:  550px) {
+    @media (min-width:  $footer-dskt-width) {
       font-size: 1.5em;
     }
 
@@ -42,7 +42,7 @@
   font-size: .9rem;
   list-style: none;
 
-  @media (min-width:  550px) {
+  @media (min-width:  $footer-dskt-width) {
     flex-direction: row;
     justify-content: space-around;
   }

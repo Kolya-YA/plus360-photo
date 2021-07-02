@@ -1,32 +1,9 @@
 {{ define "main" }}
-{{/*  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"/>
-
-<script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>  */}}
   <main class="main-home comming-soon">
     <h1 class="title">{{ .Title }}</h1>
     {{ with .Params.subtitle }}
     <h2 class="subtitle">{{ . }}</h2>
     {{ end }}
     {{ .Content }}
-    {{/*  <div id="viewer"></div>  */}}
   </main>
-  
-  
-  <style>
-    /* the viewer container must have a defined size */
-    #viewer {
-      width: 100%;
-      height: 50vh;
-    }
-  </style>
-  
-  <script>
-    var viewer = new PhotoSphereViewer.Viewer({
-      container: document.querySelector('#viewer'),
-      panorama: 'erpano.jpg'
-    });
-  </script>
-  <div id="testPano"></div>
 {{ end }}

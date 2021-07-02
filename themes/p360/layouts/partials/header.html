@@ -1,37 +1,35 @@
 <header class="header">
-  <div class="header__top">
-    <a class="header__logo logo" href="{{ .Site.BaseURL }}">
+  <div class="header__top logo-phone">
+    <a class="logo-phone__logo logo" href="{{ .Site.BaseURL }}">
       <h1 class="logo__title">
         <span>{{ .Site.Params.titleWord }}</span>{{ .Site.Params.titleDigit }}
       </h1>
     </a>
-    <a class="header__phone phone" href="tel:{{ .Site.Params.phoneLink }}" target="_blank">
+    <a class="header__phone phone" href="tel:{{ .Site.Params.phoneLink }}">
       <svg class="phone__icon" width="32" height="32">
-        <use href=""></use>
+        <use href="images/menu-sprite.svg#phone"></use>
       </svg>
       <span class="phone__text">{{ .Site.Params.phone }}</span>
     </a>
   </div>
 
-  <div class="header__bottom">
-    <nav class="header__menu menu">
-      <button class="menu__button">
-        <svg class="menu__icon" width="32" height="32">
-          <use class="menu__icon--menu" href="images/menu-sprite.svg#menu"></use>
-          <use class="menu__icon--cross" href="images/menu-sprite.svg#cross"></use>
-        </svg>
-      </button>
-      {{ $currentPage := . }}
-      <ul class="menu__list">
-        {{ range .Site.Menus.top }}
-        <li>
-          <a {{ if $currentPage.IsMenuCurrent "top" . }}
-            class="menu__link menu__link--current"
-            {{ else }}class="menu__link" href="{{ .URL }}"
-            {{ end }}>{{ .Name }}</a>
-        </li>
-        {{ end }}
-      </ul>
-    </nav>
-  </div>
+  <nav class="header__menu menu">
+    <button class="menu__button" aria-expanded="false" aria-controls="menu__list">
+      <svg class="menu__icon" width="32" height="32" aria-hidden="true">
+        <use class="menu__icon--menu" href="images/menu-sprite.svg#menu"></use>
+        <use class="menu__icon--cross" href="images/menu-sprite.svg#cross"></use>
+      </svg>
+    </button>
+    {{ $currentPage := . }}
+    <ul class="menu__list" id="menu__list">
+      {{ range .Site.Menus.top }}
+      <li>
+        <a {{ if $currentPage.IsMenuCurrent "top" . }}
+          class="menu__link menu__link--current"
+          {{ else }}class="menu__link" href="{{ .URL }}"
+          {{ end }}>{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
 </header>

@@ -1,48 +1,29 @@
 .header {
+  display: grid;
+  row-gap: var(--block-padding);
   font-family: var(--header-font-family);
 }
 
 .header__top {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  flex-wrap: wrap;
-  column-gap: 20px;
-  font-size: 120%;
-  font-weight: 100;
+  z-index: 1;
 
   a {
     text-decoration: none;
     color: var(--text-main-color);
-    text-transform: uppercase;
   }
 }
 
-.logo__title {
-  font-weight: 100;
-  
-  span {
-    text-transform: lowercase;
-    font-weight: 600;
-    letter-spacing: -0.03em;
+.header__menu {
+  @media (max-width: ($header-menu-dskt-width - 1)) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
   }
+
+  // @media (min-width: $header-menu-dskt-width) {
+  //   align-self: center;
+  // }
 }
 
-
-.header__bottom {
-  margin-top: 1rem;
-}
-
-.menu__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.menu__link {
-  display: block;
-  text-decoration: none;
-  color: var(--text-main-color);
-  text-transform: uppercase;
-  padding: .5em;
-}
+@import "logo-phone", "menu";
