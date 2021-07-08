@@ -7,7 +7,7 @@
     </a>
     <a class="header__phone phone" href="tel:{{ .Site.Params.phoneLink }}">
       <svg class="phone__icon" width="32" height="32">
-        <use href="images/menu-sprite.svg#phone"></use>
+        <use href="{{ .Site.BaseURL }}images/menu-sprite.svg#phone"></use>
       </svg>
       <span class="phone__text">{{ .Site.Params.phone }}</span>
     </a>
@@ -16,8 +16,8 @@
   <nav class="header__menu menu">
     <button class="menu__button" aria-expanded="false" aria-controls="menu__list">
       <svg class="menu__icon" width="32" height="32" aria-hidden="true">
-        <use class="menu__icon--menu" href="images/menu-sprite.svg#menu"></use>
-        <use class="menu__icon--cross" href="images/menu-sprite.svg#cross"></use>
+        <use class="menu__icon--menu" href="{{ .Site.BaseURL }}images/menu-sprite.svg#menu"></use>
+        <use class="menu__icon--cross" href="{{ .Site.BaseURL }}images/menu-sprite.svg#cross"></use>
       </svg>
     </button>
     {{ $currentPage := . }}

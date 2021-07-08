@@ -7,6 +7,6 @@ menu:
     idetifier: "imp"
 ---
 
-Full Impressum will be provided shortly.
-
 Das vollständige Impressum wird in Kürze zur Verfügung gestellt.
+
+Full Impressum will be provided shortly.

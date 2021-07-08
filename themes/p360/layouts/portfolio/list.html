@@ -1,17 +1,43 @@
 {{ define "main" }}
   <main class="portfolio">
+    {{ if not .Parent.IsHome }}
+    <a href="{{ .Parent.RelPermalink  }}">{{ .Parent.Title }}</a>
+    {{ end }}
     <h1 class="portfolio__title">{{ .Title }}</h1>
     {{ with .Params.subtitle }}
     <h2 class="portfolio__subtitle">{{ . }}</h2>
     {{ end }}
     {{ .Content }}
-    {{ range .Pages.ByPublishDate.Reverse }}
+    {{ range .Pages }}
     <p>
         <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         <a class="summary" href="{{ .RelPermalink }}">
             <p>{{ .Summary }}</p>
         </a>
     </p>
+    {{ end }}
+    {{ with .Pages }}
+    {{ range . }}
+    {{ with .Resources.ByType "image" }}
+      <div class="images">
+      {{ range $img := shuffle . }}
+      {{ $imgwebp := $img.Resize "180x180 webp" }}
+      {{ $imgjpg := $img.Resize "180x180" }}
+      <picture>
+        <source type="image/webp"
+          srcset="{{ $imgwebp.RelPermalink }}">
+        <img
+          src="{{ $imgjpg.RelPermalink }}"
+          alt=""
+          loading="lazy"
+          decoding="async"
+          width="{{ $imgjpg.Width }}"
+          height="{{ $imgjpg.Height }}">
+      </picture>
+      {{ end }}
+      </div>
+    {{ end }}
+    {{ end }}
     {{ end }}
   </main>
 {{ end }}

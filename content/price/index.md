@@ -1,9 +1,11 @@
 ---
-date: "2021-07-01"
-title: "Preise"
+date: "2021-07-08"
+title: "Preise — Beta version"
+type: "price"
 menu:
   top:
     weight: 100
+    name: "Preise"
     idetifier: "preise"
 ---
 
