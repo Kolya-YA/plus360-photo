@@ -1,0 +1,23 @@
+.faq-list {
+
+  .faq-list__header {
+    display: flex;
+    gap: 2em;
+  }
+
+  .faq-list__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  .faq-item {
+
+    &:not(:last-child) {
+      margin-bottom: 1.5em;
+    }
+
+    .faq-item__details {
+      font-style: italic;
+    }
+  }
+}

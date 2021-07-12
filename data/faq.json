@@ -1,0 +1,32 @@
+[
+  {
+    "order": 10,
+    "q": "Was?",
+    "a": "Answer 1"
+  },
+  {
+    "order": 20,
+    "q": "Wo?",
+    "a": "Answer 2"
+  },
+  {
+    "order": 30,
+    "q": "Wann?",
+    "a": "Answer 3"
+  },
+  {
+    "order": 40,
+    "q": "Wie viel kostet das?",
+    "a": "Answer 4"
+  },
+  {
+    "order": 50,
+    "q": "Warum brauche ich es?",
+    "a": "Answer 5"
+  },
+  {
+    "order": 50,
+    "q": "Warum sollte ich Sie wählen?",
+    "a": "Answer 5"
+  }
+]

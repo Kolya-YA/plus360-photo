@@ -8,14 +8,32 @@
     <h2 class="portfolio__subtitle">{{ . }}</h2>
     {{ end }}
     {{ .Content }}
+    
+    <ul class="portfolio__categores categories">
+      {{if gt (len .Pages) 1 }}
+      <li class="categories__item">
+        <a class="categories__link" href="#">Alle</a>
+      </li>
+      {{ end }}
+      {{ range .Pages }}
+      <li class="categories__item">
+        <a class="categories__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    <h3>New</h3>
     {{ range .Pages }}
-    <p>
-        <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <a class="summary" href="{{ .RelPermalink }}">
-            <p>{{ .Summary }}</p>
-        </a>
-    </p>
+      {{ . }}
+      {{ range .Pages }}
+        {{ with .Resources.ByType "image"}}
+        Resources — {{ . }}
+        {{ else }}
+        Nothing to show
+        {{ end }}
+      {{ end }}<br>
     {{ end }}
+    
+    <h3>Old</h3>
     {{ with .Pages }}
     {{ range . }}
     {{ with .Resources.ByType "image" }}

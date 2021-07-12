@@ -1,6 +1,11 @@
 {{ define "main" }}
 <section id="main">
   <h1 id="title">{{ .Title }}</h1>
+  
+  <aside id="meta">
+    <p>last edit {{ .Date.Format "2.01.2006" }}</p>
+  </aside>
+
   <div>
     <article id="content">
         {{ .Content }}
@@ -9,54 +14,32 @@
 
   <div class="price-list">
     <ul class="price-list__cards">
-      <li class="price-cards__item price-card">
-        <div class="price-card__header">
-          <div class="price-card__name">S</div>
-          <div>(bis 80 m²)</div>
-        </div>
-        <div class="price-card__line">bis 5 Panoramen</div>
-        <div class="price-card__line"> bis 6 POI Builder</div>
-        <div class="price-card__line">Hochladen zu Google Street View</div>
-        <div class="price-card__line">USB Stick mit allen Bildern</div>
-        <div class="price-card__price">€ 350,—</div>
-        <div class="price-card__cta">Kontakt</div>
-      </li>
-      <li class="price-cards__item price-card">
-        <div class="price-card__header">
-          <div class="price-card__name">L</div>
-          <div>(bis 160 m²)</div>
-        </div>
-        <div class="price-card__line">6–12 Panoramen</div>
-        <div class="price-card__line"> bis 10 POI Builder</div>
-        <div class="price-card__line">Hochladen zu Google Street View</div>
-        <div class="price-card__line">USB Stick mit allen Buildern</div>
-        <div class="price-card__price">€ 500,—</div>
-        <div class="price-card__cta">Kontakt</div>
-      </li>
-      <li class="price-cards__item price-card">
-        <div class="price-card__header">
-          <div class="price-card__name">XL</div>
-          <div>(bis 250 m²)</div>
-        </div>
-        <div class="price-card__line">12–20 Panoramen</div>
-        <div class="price-card__line"> bis 15 POI Builder</div>
-        <div class="price-card__line">Hochladen zu Google Street View</div>
-        <div class="price-card__line">USB Stick mit allen Buildern</div>
-        <div class="price-card__price">€ 650,—</div>
-        <div class="price-card__cta">Kontakt</div>
-      </li>
+      {{ range sort .Site.Data.price "order" }}        
+        <li class="price-cards__item price-card">
+          <div class="price-card__header">
+            <div class="price-card__name">{{ .name }}</div>
+            <div>(bis {{ .square }} m²)</div>
+          </div>
+          <div class="price-card__line">{{ .fromP }}–{{ .toP }} {{$.Params.panorams }}</div>
+          <div class="price-card__line">bis {{ .POI }} {{ $.Params.POI_img }}</div>
+          <div class="price-card__line">{{ $.Params.line4 }}</div>
+          <div class="price-card__line">{{ $.Params.line5 }}</div>
+          <div class="price-card__price">€ {{ .price }},—</div>
+          <div class="price-card__cta">
+            {{ with .cta }}
+              {{ . }}
+            {{ else }}
+              {{ $.Params.cta }}
+            {{ end }}
+          </div>
+        </li>
+      {{ end }}
     </ul>
 
     <div class="price-list__addon">
-      <h3>Add-on price notes</h3>
-      <p>Jedes weitere Panorama kostet € 40,— mehr.</p>
+      <h3>{{ .Params.addon_header }}</h3>
+      <p>{{ .Params.add_on_notes }}</p>
     </div>
   </div>
 </section>
-
-<aside id="meta">
-  <section>
-    <h4 id="date"> {{ .Date.Format "2.01.2006" }} </h4>
-  </section>
-</aside>
 {{ end }}

@@ -1,5 +1,5 @@
 ---
-date: "2021-07-08"
+date: "2021-07-09"
 title: "Preise — Beta version"
 type: "price"
 menu:
@@ -7,6 +7,14 @@ menu:
     weight: 100
     name: "Preise"
     idetifier: "preise"
+
+panorams: "Panoramen"
+POI_img: "POI Builder"
+line4: "Hochladen zu Google Street View"
+line5: "USB Stick mit allen Bildern"
+cta: "Kontakt"
+addon_header: "Hinweise zum Preis"
+add_on_notes: "Jedes weitere Panorama kostet € 40,— mehr. Alle Preise gelten für Berlin und im Umkreis von 30 km von Berlin."
 ---
 
 Bitte rufen Sie später an oder hinterlassen Sie eine [Nachricht](mailto:{{< param email >}}).

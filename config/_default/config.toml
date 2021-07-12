@@ -1,9 +1,15 @@
 baseURL = "http://plus360.eu/"
-languageCode = "en-us"
+languageCode = "de"
 title = "plus360"
 theme = "p360"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
+  description = "Wir bieten als 360° Panorama Fotografie  für Ihrem Firmen- und Geschäfts"
   titleWord = "plus"
   titleDigit = "360"
   email = "info@plus360.eu"
