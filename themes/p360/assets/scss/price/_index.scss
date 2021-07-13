@@ -39,8 +39,8 @@
 }
 
 .price-card__price {
-  background-color: #9d5dd1;
-  color: #fff;
+  background-color: var(--button-color);
+  color: var(--button-text);
   font-weight: 400;
   letter-spacing: .3px;
   padding: 1em;
@@ -48,7 +48,7 @@
 }
 
 .price-card__cta {
-  background-color: #dde;
+  background-color:var(--cards-color);
   padding: 1em;
   text-align: center;
 }

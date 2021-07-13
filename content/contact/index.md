@@ -1,6 +1,9 @@
 ---
-date: "2021-07-01"
+date: "2021-07-13"
 title: "Kontakt"
+subtitle: "Noch Fragen? Jetzt Kontakt aufnehmen"
+description: "Unser Kontakt-Formular. Jetzt Kontakt aufnehmen"
+type: "contacts"
 menu:
   top:
     weight: 110
@@ -10,8 +13,10 @@ menu:
     idetifier: "kontakt"
 ---
 
-Email: [{{< param email >}}](mailto:{{< param email >}})
-
 Tel: **Nicht jetzt**. _{{< param phone >}}_
 
 Fax: **Nicht jetzt**. _{{< param phone >}}_
+
+### Das Kontaktformular funktioniert leider noch nicht
+
+Email: [{{< param email >}}](mailto:{{< param email >}})
