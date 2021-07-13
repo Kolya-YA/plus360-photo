@@ -2,7 +2,7 @@
   {
     "order": 10,
     "q": "Was?",
-    "a": "Answer 1"
+    "a": "__360º__ Panoramen, __Google Street View__ Panoramen & Interior Fotos "
   },
   {
     "order": 20,
@@ -12,21 +12,21 @@
   {
     "order": 30,
     "q": "Wann?",
-    "a": "Answer 3"
+    "a": "Nach Erhalt Ihrer Bestellung von Ihnen"
   },
   {
     "order": 40,
     "q": "Wie viel kostet das?",
-    "a": "Answer 4"
+    "a": "Alle Antworten finden Sie in unserer [Preisliste](/price)" 
   },
   {
     "order": 50,
     "q": "Warum brauche ich es?",
-    "a": "Answer 5"
+    "a": "Denn Sie wollen besser sein als Ihre Konkurrenten, mehr Kunden haben und sich keine Sorgen um die Zukunft von Ihnen und Ihrem Unternehmen machen müssen"
   },
   {
     "order": 50,
     "q": "Warum sollte ich Sie wählen?",
-    "a": "Answer 5"
+    "a": "Wir sind cool und wir haben sehr gute Angebote"
   }
 ]

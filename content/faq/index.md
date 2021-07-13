@@ -14,7 +14,4 @@ Es ist alles klar, oder?
 
 It's all clear, isn't it?
 
-
-
-{{< detsum "question" "answer" >}}
-<details><summary>QQQQQ</summary>AAAAA {{< relref "price" >}}</details>
+**Achtung!** Bitte betrachten Sie alle Antworten als Scherz. Aber an jedem Scherz steckt ein wenig Wahrheit.

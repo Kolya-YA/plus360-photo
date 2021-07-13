@@ -16,8 +16,13 @@
       margin-bottom: 1.5em;
     }
 
-    .faq-item__details {
-      font-style: italic;
+    .faq-item__question {
+      text-decoration: underline;
+    }
+
+    .faq-item__answer {
+      background-color: var(--paper-color);
+      padding: 1em;
     }
   }
 }

@@ -20,8 +20,8 @@
       {{ range sort .Site.Data.faq "order" }}        
         <li class="faq-item">
             <details class="faq-item__details">
-              <summary class="faq-item_question">{{ .q }}</summary>
-              <p class="faq-item__answer">{{ .a }}</p>
+              <summary class="faq-item__question">{{ .q | markdownify }}</summary>
+              <p class="faq-item__answer">{{ .a | markdownify }}</p>
             </details>
         </li>
       {{ end }}
