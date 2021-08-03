@@ -1,5 +1,10 @@
 {{ define "main" }}
 <section id="main">
+  <aside id="meta">
+    <p>last edit {{ .Date.Format "2.01.2006" }}</p>
+    <hr>
+  </aside>
+
   <h1 id="title">{{ .Title }}</h1>
 
   <div>
@@ -33,10 +38,6 @@
     </div>
   </div>
 
-  <aside id="meta">
-    <hr>
-    <p>last edit {{ .Date.Format "2.01.2006" }}</p>
-  </aside>
 </section>
 
 {{ end }}
