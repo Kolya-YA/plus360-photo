@@ -1,4 +1,4 @@
-baseURL = "http://plus360.eu/"
+baseURL = "https://plus360.eu/"
 languageCode = "de"
 title = "plus360"
 theme = "p360"
