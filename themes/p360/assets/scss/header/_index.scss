@@ -1,6 +1,8 @@
 .header {
   display: grid;
   row-gap: var(--block-padding);
+
+  background-color: var(--illuminating);
   font-family: var(--header-font-family);
 }
 

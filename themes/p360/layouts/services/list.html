@@ -8,17 +8,20 @@
 {{ .Content }}
 
 <aside id="meta">
-  <p>last edit {{ .Date.Format "2.01.2006" }}</p>
   <hr>
+  <p>last edit {{ .Date.Format "2.01.2006" }}</p>
 </aside>
-
-{{ range .Pages.ByPublishDate.Reverse }}
-<article class="service__item">
-  <a href="{{ .RelPermalink }}">
-    <h3>{{ .Title }}</h3>
-    <p>{{ .Summary }}</p>
-  </a>
-</article>
-{{ end }}
+<section class="service-items">
+  {{ range .Pages.ByPublishDate.Reverse }}
+  <article class="service-item">
+    <a class="service-item__link" href="{{ .RelPermalink }}">
+      <h3 class="service-item__title">{{ .Title }}</h3>
+      <img class="service-item__img" src="https://via.placeholder.com/450x225?text=plus360.eu" alt="Placeholder">
+      <p class="service-item__content">{{ .Summary }}</p>
+      <p class="service-item__footer">Price from € {{ .Params.price_from }},—</p>
+    </a>
+  </article>
+  {{ end }}
+</section>
 
 {{ end }}

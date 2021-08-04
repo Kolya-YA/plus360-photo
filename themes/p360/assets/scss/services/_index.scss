@@ -1,0 +1,43 @@
+.service-item {
+
+  .service-item__link {
+    background-color: var(--illuminating);
+    margin-bottom: 1em;
+    padding: 1em;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 
+      "title"
+      "img"
+      "content"
+      "footer";
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .service-item__title {
+    grid-area: title;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  .service-item__img {
+    grid-area: img;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .service-item__content {
+    grid-area: content;
+  }
+  
+  .service-item__footer {
+    grid-area: footer;
+    background-color: var(--ultimate-gray);
+    color: #222;
+    margin-bottom: 0;
+    padding: 1em 0.5em;
+    text-align: right;
+    font-size: 1.1em;
+  }
+}

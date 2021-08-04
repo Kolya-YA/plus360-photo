@@ -10,13 +10,18 @@
   
   .logo {
     .logo__title {
+      color: #fff;
+      text-shadow: -1px 1px 1px #777,
+                    1px 1px 1px #777,
+                    1px -1px 1px #777,
+                   -1px -1px 1px #777;
       font-weight: 100;
       line-height: 1em;
       margin: 0;
       
       span {
         font-weight: 600;
-        letter-spacing: -0.03em;
+        letter-spacing: -0.02em;
 
       }
 

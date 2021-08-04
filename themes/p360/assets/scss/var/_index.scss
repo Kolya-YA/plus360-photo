@@ -16,9 +16,14 @@ $footer-dskt-width: 550px;
   --paper-color: #fdf3e5;
   --warning-color: #ff4747;
 
+  --ultimate-gray: hsl(210, 2%, 58%);
+  --illuminating: hsl(52, 89%, 63%);
+
+
+
   --header-font-family: 'Open Sans', sans-serif;
   --common-font-family: 'Open Sans', sans-serif;
-  --footer-font-family: 'Open Sans', sans-serif;
+  --footer-font-family: -apple-system, 'Open Sans', sans-serif;
   --common_font-size: 16px;
   --block-padding: 1rem;
 }
