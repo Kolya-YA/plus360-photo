@@ -19,7 +19,7 @@
 }
 
 .price-card__header {
-  background-color: #dde;
+  background-color: var(--cards-color);
   padding: .5em;
   text-align: center;
   letter-spacing: .3px;
@@ -39,16 +39,24 @@
 }
 
 .price-card__price {
-  background-color: var(--button-color);
-  color: var(--button-text);
+  background-color: var(--illuminating);
   font-weight: 400;
   letter-spacing: .3px;
   padding: 1em;
   text-align: center;
+  border-bottom: 2px solid #dde;
 }
 
 .price-card__cta {
-  background-color:var(--cards-color);
+  background-color: var(--button-color);
+  color: var(--button-text);
   padding: 1em;
   text-align: center;
+  
+  a {
+    color: inherit;
+    letter-spacing: .3px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 }

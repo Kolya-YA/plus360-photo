@@ -8,4 +8,4 @@ price_from: 350
 
 Google Street View Geschäftsfoto.
 
-Google street view busines photo.
+Google street view bussines photo.

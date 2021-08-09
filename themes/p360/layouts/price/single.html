@@ -29,7 +29,7 @@
             {{ with .cta }}
               {{ . }}
             {{ else }}
-              {{ $.Params.cta }}
+              <a href={{ "contact" | relURL }}>{{ $.Params.cta }}</a>
             {{ end }}
           </div>
         </li>

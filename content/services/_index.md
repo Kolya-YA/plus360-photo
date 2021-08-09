@@ -1,7 +1,7 @@
 ---
 date: "2021-08-03"
 title: "Services"
-subtitle: "Our services"
+subtitle: "Unsere Dienstleistungen"
 menu:
   top:
     weight: 80

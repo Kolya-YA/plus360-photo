@@ -12,7 +12,7 @@ panorams: "Panoramen"
 POI_img: "POI Builder"
 line4: "Hochladen zu Google Street View"
 line5: "USB Stick mit allen Bildern"
-cta: "Kontakt"
+cta: "Jetzt anfragen"
 addon_header: "Hinweise zum Preis"
 add_on_notes: "Jedes weitere Panorama kostet € 40,— mehr. Alle Preise gelten für Berlin und im Umkreis von 30 km von Berlin."
 ---
