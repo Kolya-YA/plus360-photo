@@ -2,6 +2,9 @@ $header-top-dskt-width: 500px;
 $header-menu-dskt-width: 750px;
 $footer-dskt-width: 550px;
 
+$service-item-dskt-width: 650px;
+
+
 :root {
   --wraper-max-width: 1040px;
 
@@ -18,8 +21,8 @@ $footer-dskt-width: 550px;
 
   --ultimate-gray: hsl(210, 2%, 58%);
   --illuminating: hsl(52, 89%, 63%);
-
-
+  --illuminating-light: hsl(30,69.7%, 25.9%);
+  --illuminating-light: hsl(52, 89%, 78%);
 
   --header-font-family: 'Open Sans', sans-serif;
   --common-font-family: 'Open Sans', sans-serif;

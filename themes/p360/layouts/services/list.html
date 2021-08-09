@@ -1,4 +1,5 @@
 {{ define "main" }}
+
 <h1>{{ .Title }}</h1>
 
 {{ with .Params.subtitle }}
@@ -12,11 +13,25 @@
   <p>last edit {{ .Date.Format "2.01.2006" }}</p>
 </aside>
 <section class="service-items">
-  {{ range .Pages.ByPublishDate.Reverse }}
-  <article class="service-item">
-    <a class="service-item__link" href="{{ .RelPermalink }}">
-      <h3 class="service-item__title">{{ .Title }}</h3>
-      <img class="service-item__img" src="https://via.placeholder.com/450x225?text=plus360.eu" alt="Placeholder">
+  {{ range .Pages.ByParam "position" }}
+    <article class="service-item">
+      <a class="service-item__link" href="{{ .RelPermalink }}">
+        <h3 class="service-item__title">{{ .Title }}</h3>
+        {{ with .Resources.GetMatch "thumb" }}
+          {{ $thmbwebp := .Fit "450x225 webp" }}
+          {{ $thmbjpg := .Fit "450x225" }}
+          <picture class="service-item__img" width="{{ $thmbjpg.Width }}" height="{{ $thmbjpg.Height }}">
+            <source type="image/webp"
+              srcset="{{ $thmbwebp.RelPermalink }}">
+            <img
+              src="{{ $thmbjpg.RelPermalink }}"
+              alt=""
+              loading="lazy"
+              decoding="async">
+          </picture>
+      {{ else }}
+        <img class="service-item__img" src="https://via.placeholder.com/450x225?text=plus360.eu" alt="Placeholder">
+      {{ end }}
       <p class="service-item__content">{{ .Summary }}</p>
       <p class="service-item__footer">Price from € {{ .Params.price_from }},—</p>
     </a>
