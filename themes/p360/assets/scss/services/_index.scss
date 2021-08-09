@@ -46,7 +46,13 @@
   .service-item__img {
     grid-area: img;
     margin: 0 auto;
-    max-width: 100%;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      // width: 100%;
+      
+    }
   }
   
   .service-item__content {
