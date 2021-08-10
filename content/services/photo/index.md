@@ -2,7 +2,7 @@
 date: "2021-08-10"
 title: "Innen- und Architekturfotografie"
 subtitle: "Interior and architectural photography"
-position: 20
+weight: 20
 price_from: 250
 
 summary: "Innenfotografie. Fotodienstleistungen für alle Arten von Gebäuden, Räumlichkeiten und Industrieanlagen. Das Ergebnis sind Bilder, die neue Kunden auf Ihr Unternehmen aufmerksam machen und es von seiner besten Seite zeigen. Heutzutage hat fast jedes Unternehmen eine Website. Und auf einer Website einer öffentlichen Einrichtung — Café, Restaurant, Bar, Fitnessstudio, Friseursalon, Arztpraxis und so weiter — sollten helle und hochwertige Bilder von Innenräumen sein, es hilft immer, neue Besucher und Kunden zu gewinnen."
@@ -28,4 +28,6 @@ Ein Innenraumfotograf ist ein Fachmann, der Ihnen helfen wird:
 
 Innenaufnahmen sollen die Aufmerksamkeit Ihrer Kunden wecken und den Verkauf Ihrer Produkte und Dienstleistungen unterstützen.
 
-## Interior and architectural photography.
+### Architekturfotografie
+
+## Interior and architectural photography

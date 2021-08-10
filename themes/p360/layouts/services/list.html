@@ -12,7 +12,7 @@
 </aside>
 
 <section class="service-items">
-  {{ range .Pages.ByParam "position" }}
+  {{ range .Pages.ByWeight }}
     {{ $item := . }}
     <article class="service-item">
       <a class="service-item__link" href="{{ .RelPermalink }}">
