@@ -3,11 +3,9 @@
 
 {{ $description := "" -}}
 {{ with .Description }}
-{{ $description = . -}}
+  {{ $description = . -}}
 {{ else -}}
-{{ with $.Site.Params.description -}}
-{{ $description = . -}}
-{{ end -}}
+  {{ with $.Site.Params.description -}}{{ $description = . -}}{{ end -}}
 {{ end -}}
 
 {{- $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
@@ -16,6 +14,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ $title }}</title>
-  <meta name="description" content="{{ . }}" />
+  <meta name="description" content="{{ $description }}" />
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 </head>

@@ -6,6 +6,8 @@ menu:
     name: "AGB"
     weight: 80
     idetifier: "agb"
+
+robotsdisallow: true
 ---
 
 AGB ist sehr wichtig, aber nicht im Moment.

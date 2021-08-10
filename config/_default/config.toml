@@ -1,7 +1,10 @@
 baseURL = "https://plus360.eu/"
 languageCode = "de"
-title = "plus360 — Google Street View, Virtuelle Rundgänge, Innen- und Architekturfotografie"
 theme = "p360"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+title = "plus360 — Google Street View, Virtuelle Rundgänge, Innen- und Architekturfotografie"
 
 [markup]
   [markup.goldmark]
