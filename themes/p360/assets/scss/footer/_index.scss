@@ -1,7 +1,7 @@
 .footer {
-  background-color:var(--ultimate-gray);
+  background-color:var(--footer-bg-color);
   font-family: var(--footer-font-family);
-  color: #fff;
+  color: var(--footer-text-color);
 }
 
 .footer__top {

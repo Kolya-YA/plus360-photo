@@ -1,5 +1,5 @@
 ---
-date: "2021-07-09"
+date: "2021-09-01"
 title: "Preise — Beta version"
 type: "price"
 menu:

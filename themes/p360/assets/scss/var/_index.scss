@@ -6,12 +6,15 @@ $service-item-dskt-width: 650px;
 
 
 :root {
-  --wraper-max-width: 1040px;
+  --wraper-max-width: 1240px;
 
   --body-bg-color: #c8c8c8;
   --block-bg-color: #fff;
   --text-main-color: #3d3939;
   --text-main-color-50a: #3d393980;
+  --header-bg-color: hsl(0, 0%, 96%);
+  --footer-bg-color: hsl(0, 0%, 20%);
+  --footer-text-color: hsl(36, 100%, 90%);
   --link-hover-color: #61afb5;
   --cards-color: #dde;
   --button-color: #9d5dd1;

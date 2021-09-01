@@ -35,12 +35,12 @@
 
   .menu__list {
     display: none;
-    margin: 0;
+    margin: 1em 0 0;
     list-style: none;
-    // background-color: var(--block-bg-color);
-    background-color: var(--illuminating);
+    background-color: var(--header-bg-color);
+    // background-color: var(--illuminating);
     @media (max-width: ($header-menu-dskt-width - 1)) {
-      padding: 1.2em 0 1em 3em;
+      padding: 0 1em .8em 2.5em;
       box-shadow:  0 50vh 0 50vh var(--text-main-color-50a);
 
     }
