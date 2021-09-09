@@ -1,9 +1,11 @@
 {{ define "main" }}
   <main class="portfolio">
-    {{ if not .Parent.IsHome }}
-    <a href="{{ .Parent.RelPermalink  }}">{{ .Parent.Title }}</a>
-    {{ end }}
     <h1 class="portfolio__title">{{ .Title }}</h1>
+    {{ if not .Parent.IsHome }}
+    <div class="back-link">
+      <a href="{{ .Parent.RelPermalink  }}">{{ .Parent.Title }}</a>
+    </div>
+    {{ end }}
     {{ with .Params.subtitle }}
     <h2 class="portfolio__subtitle">{{ . }}</h2>
     {{ end }}
