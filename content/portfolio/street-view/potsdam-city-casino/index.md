@@ -7,14 +7,50 @@ pano360: true
 
 Description of City Casino — Potsdam
 
-{{< pano360 src="cityCasino01.jpg" autoLoad=1 yaw=265 >}}
+{{< mPano360
+      dir="city-casino01"
+      title="City Casino — Potsdam 01" 
+      extLink="#"
+      yaw=265
+      autoLoad=true
+      author="pano360" >}}
 
-{{< pano360 src="cityCasino02.jpg" autoLoad=0 yaw=250 >}}
+{{< mPano360
+      dir="city-casino02"
+      title="City Casino — Potsdam 02" 
+      extLink="#"
+      yaw=250
+      autoLoad=true
+      author="pano360" >}}
 
-{{< pano360 src="cityCasino03.jpg" autoLoad=0 yaw=275 >}}
+{{< mPano360
+      dir="city-casino03"
+      title="City Casino — Potsdam 03" 
+      extLink="#"
+      yaw=275
+      autoLoad=true
+      author="pano360" >}}
 
-{{< pano360 src="cityCasino04.jpg" autoLoad=0 yaw=240 >}}
+{{< mPano360
+      dir="city-casino04"
+      title="City Casino — Potsdam 04" 
+      extLink="#"
+      yaw=240
+      autoLoad=true
+      author="pano360" >}}
 
-{{< pano360 src="cityCasino05.jpg" autoLoad=0 yaw=295 >}}
+{{< mPano360
+      dir="city-casino05"
+      title="City Casino — Potsdam 05" 
+      extLink="#"
+      yaw=265
+      autoLoad=true
+      author="pano360" >}}
 
-{{< pano360 src="cityCasino06.jpg" autoLoad=0 yaw=225 >}}
+{{< mPano360
+      dir="city-casino06"
+      title="City Casino — Potsdam 06" 
+      extLink="#"
+      yaw=295
+      autoLoad=true
+      author="pano360" >}}

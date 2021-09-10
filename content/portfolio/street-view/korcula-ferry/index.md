@@ -8,10 +8,9 @@ pano360: true
 Car ferry terminal Korcula to Orebić  
 *Korčula, Croatia*
 
-{{< pano360
-      src="korcula-ferry.jpg"
-      id="kferry01"
-      caption="Morning on car ferry terminal" 
+{{< mPano360
+      dir="ferry-korcula"
+      title="Morning on car ferry terminal" 
       extLink="https://goo.gl/maps/sNXpTiEHCbMdTj8p9"
       yaw=285
       autoLoad=true
