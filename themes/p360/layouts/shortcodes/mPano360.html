@@ -1,7 +1,5 @@
 {{ $panoSrc := default (.Get 0) (.Get "dir") }}
 {{ $panoId := default (lower $panoSrc | replaceRE "[^a-z0-9]" "") (.Get "id") }}
-{{ $panoConfigPath := print "multires/" $panoSrc "/config.json" | absURL }}
-{{ $panoConfig := getJSON $panoConfigPath }}
 
 <style>
   .pano360 {
@@ -42,15 +40,18 @@
 </div>
 
 <script>
-  const config = {{ $panoConfig }}
-  config.multiRes.basePath = "/multires/{{ $panoSrc }}"
-  pannellum.viewer('{{ $panoId }}', {
-    ...config,
-    {{ with .Get "yaw" }}"yaw": {{ . }},{{ end }}
-    {{ with .Get "pitch" }}"pitch": {{ . }},{{ end }}
-    {{ with .Get "autoLoad" }}"autoLoad": true,{{ end }}
-    {{ with .Get "title" }}"title": {{ . }},{{ end }}
-    {{ with .Get "author" }}"author": {{ . }},{{ end }}
-  })
+  fetch("/multires/{{ $panoSrc }}/config.json")
+    .then(resp => resp.json())
+    .then(config => {
+      config.multiRes.basePath = "/multires/{{ $panoSrc }}"
+      pannellum.viewer('{{ $panoId }}', {
+        ...config,
+        {{ with .Get "yaw" }}"yaw": {{ . }},{{ end }}
+        {{ with .Get "pitch" }}"pitch": {{ . }},{{ end }}
+        {{ with .Get "autoLoad" }}"autoLoad": true,{{ end }}
+        {{ with .Get "title" }}"title": {{ . }},{{ end }}
+        {{ with .Get "author" }}"author": {{ . }},{{ end }}
+      })
+    })
 </script>
 
