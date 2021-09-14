@@ -1,11 +1,12 @@
 ---
-date: "2021-07-01"
-title: "Ein kleines Büro"
-tag: "office"
+date: '2021-09-14'
+title: Ein kleines Büro
+tag: office
 pano360: true
+lastmod: '2021-09-14T12:40:15.027Z'
 ---
 
-Ein kleines Büro in Berlin
+## Ein kleines Büro irgendwo in Berlin
 
 {{< mPano360
       dir="small-office01"

@@ -1,42 +1,13 @@
 {{ $panoSrc := default (.Get 0) (.Get "dir") }}
 {{ $panoId := default (lower $panoSrc | replaceRE "[^a-z0-9]" "") (.Get "id") }}
 
-<style>
-  .pano360 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pano360__pano {
-    width: 100%;
-    max-width: 600px;
-      aspect-ratio: 16 / 9;
-  }
-
-  @supports not (aspect-ratio: 16 / 9) {
-    .pano360__pano::before {
-      float: left; 
-      padding-top: 56.25%; 
-      content: '';
-    }
-  
-    .pano360__pano:after {
-      display: block;
-      content: '';
-      clear: both;
-    }
-  }
-</style>
-
 <div class="pano360">
   <div id="{{ $panoId }}" class="pano360__pano"></div>
-  {{ with .Get "caption" }}<p class="pano360__caption">{{ . }}</p>{{ end }}
-  {{ with .Get "extLink" -}}
-  <p>
+  {{ with .Get "caption" }}<p class="pano360__caption">{{ . }}</p>{{ end -}}
+  
+  {{ with .Get "extLink" }}<p>
     <a class="pano360__ext-link" href="{{ . }}" target="_blank" rel="noopener">Link to view on external site</a>
-  </p>
-  {{ end -}}
+  </p>{{ end }}
 </div>
 
 <script>
@@ -54,4 +25,3 @@
       })
     })
 </script>
-
