@@ -1,0 +1,42 @@
+{{ $tourSrc := .Get "nameTemplate" -}}
+{{ $tourId := default (lower $tourSrc | replaceRE "[^a-z0-9]" "") (.Get "id") -}}
+{{ $panosQty := .Get "panosQty" -}}
+{{ $autoload := default true (.Get "autoLoad") }}
+{{ $author := default "plus360" (.Get "author") -}}
+
+<div class="pano360">
+  <div id="{{ $tourId }}" class="pano360__pano"></div>
+  {{ with .Get "caption" }}<p class="pano360__caption">{{ . }}</p>{{ end -}}
+  
+  {{ with .Get "extLink" }}<p>
+    <a class="pano360__ext-link" href="{{ . }}" target="_blank" rel="noopener">Link to view on external site</a>
+  </p>{{ end }}
+</div>
+
+<script>
+  const author = {{ $author }}
+  const autoLoad = ({{ $autoload }} === true)
+  const panosName = [...Array({{ $panosQty }})].map((x, i) => {{ $tourSrc }} + ('' + (i + 1)).padStart(2, '0'))
+  
+  Promise.all(
+    panosName.map(name =>
+      fetch(`/multires/${name}/config.json`)
+        .then(resp => resp.json())
+    )
+  ).then(panosConfig => {
+      panosConfig.forEach((c, i) => c.multiRes.basePath = `/multires/${panosName[i]}`)
+      panosConfig[0].autoload = true
+      //console.log(panosConfig[0])
+      const scenes = panosConfig.reduce((obj, pCnf, i) => ({ ...obj, [panosName[i]]:  pCnf }), {})
+      console.log('test', scenes )
+      pannellum.viewer('{{ $tourId }}', {
+        "default": {
+          "firstScene": panosName[0],
+          "sceneFadeDuration": 1000,
+          autoLoad,
+          author,
+        },
+        scenes
+      })
+  })
+  </script>
