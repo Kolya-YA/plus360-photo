@@ -1,5 +1,7 @@
 {{ $panoSrc := default (.Get 0) (.Get "dir") }}
 {{ $panoId := default (lower $panoSrc | replaceRE "[^a-z0-9]" "") (.Get "id") }}
+{{ $panoConfigPath := print "multires/" $panoSrc "/config.json" | absURL }}
+{{ $panoConfig := getJSON $panoConfigPath }}
 
 <style>
   .pano360 {
@@ -40,24 +42,15 @@
 </div>
 
 <script>
+  const config = {{ $panoConfig }}
+  config.multiRes.basePath = "/multires/{{ $panoSrc }}"
   pannellum.viewer('{{ $panoId }}', {
-      "type": "multires",
-      "multiRes" : {
-        {{/*  "shtHash": "5s_NtSWCNHoeRkRPoeayayn~WVj[j@WCozazayj[j[ayoes.f6jZoeWBWXazj@j[j]j[a#j[ay",  */}}
-        {{/*  "basePath": {{ "./multires/pano01" | absURL }},  */}}
-        "basePath": "/multires/{{ $panoSrc }}",
-        "path": "/%l/%s%y_%x",
-        "fallbackPath": "/fallback/%s",
-        "extension": "jpg",
-        "tileResolution": 512,
-        "maxLevel": 4,
-        "cubeResolution": 2640,
-      },
-      {{/*  "panorama": "{{ $panoSrc }}",  */}}
-      {{ with .Get "yaw" }}"yaw": {{ . }},{{ end }}
-      {{ with .Get "autoLoad" }}"autoLoad": true,{{ end }}
-      {{ with .Get "title" }}"title": {{ . }},{{ end }}
-      {{ with .Get "author" }}"author": {{ . }},{{ end }}
-  });
+    ...config,
+    {{ with .Get "yaw" }}"yaw": {{ . }},{{ end }}
+    {{ with .Get "pitch" }}"pitch": {{ . }},{{ end }}
+    {{ with .Get "autoLoad" }}"autoLoad": true,{{ end }}
+    {{ with .Get "title" }}"title": {{ . }},{{ end }}
+    {{ with .Get "author" }}"author": {{ . }},{{ end }}
+  })
 </script>
 
