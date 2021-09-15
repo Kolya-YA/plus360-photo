@@ -6,7 +6,16 @@ menu:
     name: "Homepage"
     weight: 60
     idetifier: "home"
+pano360: true
 ---
+
+{{< mPano360
+      dir="ferry-korcula"
+      title="Morning on car ferry terminal"
+      extLink="https://goo.gl/maps/sNXpTiEHCbMdTj8p9"
+      yaw=168
+      autoLoad=true
+      author="pano360" >}}
 
 ### Unsere Dienstleistungen
 
