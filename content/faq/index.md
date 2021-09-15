@@ -1,5 +1,5 @@
 ---
-date: "2021-07-09"
+date: "2021-09-15"
 title: "FAQ"
 subtitle: "Häufig gestellte Fragen (FAQ)"
 description: "Häufig gestellte Fragen (FAQ)"
@@ -10,8 +10,6 @@ menu:
     idetifier: "faq"
 ---
 
-Es ist alles klar, oder?
-
-It's all clear, isn't it?
+Es ist alles klar, oder? | It's all clear, isn't it?
 
 **Achtung!** Bitte betrachten Sie alle Antworten als Scherz. Aber an jedem Scherz steckt ein wenig Wahrheit.
