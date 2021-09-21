@@ -1,5 +1,7 @@
 {{ $panoSrc := default (.Get 0) (.Get "dir") }}
 {{ $panoId := default (lower $panoSrc | replaceRE "[^a-z0-9]" "") (.Get "id") }}
+{{ $previewImg := .Page.Resources.GetMatch (printf "*%s*" $panoSrc) }}
+{{ $clickToLoadBtn := $.Site.Params.clickToLoadBtn }}
 
 <div class="pano360">
   <div id="{{ $panoId }}" class="pano360__pano"></div>
@@ -22,6 +24,15 @@
         {{ with .Get "autoLoad" }}"autoLoad": true,{{ end }}
         {{ with .Get "title" }}"title": {{ . }},{{ end }}
         {{ with .Get "author" }}"author": {{ . }},{{ end }}
+        {{ with $previewImg }}
+        "preview": {{ .RelPermalink }},
+        "autoLoad": false,
+        {{ end }}
+        {{ with $clickToLoadBtn }}
+        "strings": {
+          "loadButtonLabel": "{{ . }}",
+        }
+        {{ end }}
       })
     })
 </script>
