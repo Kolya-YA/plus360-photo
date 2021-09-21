@@ -19,6 +19,10 @@
     padding: .5em 1em;
     text-decoration: none;
     color:inherit;
+
+    &:hover {
+      color: var(--link-hover-color);
+    }
   }
 
   .footer__logo {
@@ -52,18 +56,17 @@
   .footer-menu__link {
     display: block;
     text-decoration: none;
-    color: var(--text-main-color);
+    // color: var(--text-main-color);
     color: inherit;
     text-transform: uppercase;
     padding: .3em;
     
     &:hover {
       color: var(--link-hover-color);
-      color: var(--text-main-color);
     }
   }
 
   .footer-menu__link--current {
-    font-weight: 600;
+    border-bottom: solid 1px var(--footer-text-color)
   }
 }
