@@ -9,6 +9,7 @@
     {{ with .Params.subtitle }}
     <h2 class="portfolio__subtitle">{{ . }}</h2>
     {{ end }}
+
     {{ .Content }}
     
     <ul class="portfolio__categores categories">
@@ -23,26 +24,44 @@
       </li>
       {{ end }}
     </ul>
-    <h3>New</h3>
-    {{ range .Pages }}
-      {{ . }}
+    
+    {{ with .Sections }}
+    {{ range . }}
+      <h3>{{ .Name }}</h3>
       {{ range .Pages }}
+        <h4><a href="{{ .RelPermalink }}">{{ .Name }}</h4></a>
         {{ with .Resources.ByType "image"}}
-        Resources — {{ . }}
+        <div class="images">
+          {{ range $img := shuffle . }}
+          {{ $imgwebp := $img.Resize "x180 webp" }}
+          {{ $imgjpg := $img.Resize "x180" }}
+          <picture>
+            <source type="image/webp"
+              srcset="{{ $imgwebp.RelPermalink }}">
+            <img
+              src="{{ $imgjpg.RelPermalink }}"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              width="{{ $imgjpg.Width }}"
+              height="{{ $imgjpg.Height }}">
+          </picture>
+          {{ end }}
+          </div>
         {{ else }}
-        Nothing to show
+        — No images
         {{ end }}
       {{ end }}<br>
     {{ end }}
-    
-    <h3>Old</h3>
-    {{ with .Pages }}
-    {{ range . }}
-    {{ with .Resources.ByType "image" }}
-      <div class="images">
+    {{ else }}
+    <p>No sections</p>
+    {{ range .Pages }}
+    <h4>{{ .Name }}</h4>
+    {{ with .Resources.ByType "image"}}
+    <div class="images">
       {{ range $img := shuffle . }}
-      {{ $imgwebp := $img.Resize "180x180 webp" }}
-      {{ $imgjpg := $img.Resize "180x180" }}
+      {{ $imgwebp := $img.Resize "x180 webp" }}
+      {{ $imgjpg := $img.Resize "x180" }}
       <picture>
         <source type="image/webp"
           srcset="{{ $imgwebp.RelPermalink }}">
@@ -56,8 +75,11 @@
       </picture>
       {{ end }}
       </div>
+    {{ else }}
+    — No images
     {{ end }}
+  {{ end }}<br>
     {{ end }}
-    {{ end }}
+    
   </main>
 {{ end }}

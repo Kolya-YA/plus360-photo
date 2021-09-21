@@ -14,8 +14,8 @@
   
   @supports not (aspect-ratio: 16 / 9) {
     .pano360__pano::before {
-      float: left; 
-      padding-top: 56.25%; 
+      float: left;
+      padding-top: calc(100% / (16 / 9)); 
       content: '';
     }
   
@@ -26,6 +26,3 @@
     }
   }
 }
-
-// --wraper-max-width: 1240px;
-// --block-gap: 1rem;
