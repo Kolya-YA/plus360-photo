@@ -10,6 +10,4 @@ menu:
     idetifier: "faq"
 ---
 
-Es ist alles klar, oder? | It's all clear, isn't it?
-
-**Achtung!** Bitte betrachten Sie alle Antworten als Scherz. Aber an jedem Scherz steckt ein wenig Wahrheit.
+Wenn Sie Ihre Frage nicht auf dieser Seite finden, kontaktieren Sie uns bitte über das [Kontaktformular]({{< relref "contact" >}} "Kontaktseite").
