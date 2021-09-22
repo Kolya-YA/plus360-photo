@@ -1,7 +1,9 @@
 ---
 date: "2021-07-01"
 title: "Google Street View"
-subtitle: "Sub title"
+subtitle: "360° Panorama-Fotografie"
 ---
 
-All best _Google Street View_ works.
+Alle unsere besten **Google Street View** und **360°-Panoramafotos**.
+
+All of our best **Google Street View** and **360° panoramic photography**.

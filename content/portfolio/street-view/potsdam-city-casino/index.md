@@ -1,17 +1,17 @@
 ---
 date: '2021-07-01'
-title: City Casino — Potsdam
+title: City Casino
 tag: casino
 pano360: true
 lastmod: '2021-09-14T12:58:01.157Z'
 ---
 
-City Casino — Spielhalle in Potsdam
+**City Casino — Spielhalle in Potsdam**  
 *Potsdam, Deutchland*
 
 {{< mPano360
       dir="city-casino01"
-      title="City Casino — 01"
+      title="City Casino 1"
       extLink="#"
       yaw=265
       autoLoad=true
@@ -19,35 +19,35 @@ City Casino — Spielhalle in Potsdam
 
 {{< mPano360
       dir="city-casino02"
-      title="City Casino — 02"
+      title="City Casino 2"
       yaw=250
       autoLoad=true
       author="pano360" >}}
 
 {{< mPano360
       dir="city-casino03"
-      title="City Casino — 03"
+      title="City Casino 3"
       yaw=275
       autoLoad=true
       author="pano360" >}}
 
 {{< mPano360
       dir="city-casino04"
-      title="City Casino — 04"
+      title="City Casino 4"
       yaw=240
       autoLoad=true
       author="pano360" >}}
 
 {{< mPano360
       dir="city-casino05"
-      title="City Casino — 05"
+      title="City Casino 5"
       yaw=265
       autoLoad=true
       author="pano360" >}}
 
 {{< mPano360
       dir="city-casino06"
-      title="City Casino — 06"
+      title="City Casino 6"
       yaw=295
       autoLoad=true
       author="pano360" >}}

@@ -1,11 +1,12 @@
 {{ define "main" }}
   <main class="portfolio">
-    <h1 class="portfolio__title">{{ .Title }}</h1>
     {{ if not .Parent.IsHome }}
     <div class="back-link">
-      <a href="{{ .Parent.RelPermalink  }}">{{ .Parent.Title }}</a>
+      <a href="{{ .Parent.RelPermalink  }}"><— {{ .Parent.Title }}</a>
     </div>
     {{ end }}
+
+    <h1 class="portfolio__title">{{ .Title }}</h1>
     {{ with .Params.subtitle }}
     <h2 class="portfolio__subtitle">{{ . }}</h2>
     {{ end }}
@@ -26,60 +27,16 @@
     </ul>
     
     {{ with .Sections }}
-    {{ range . }}
-      <h3>{{ .Name }}</h3>
-      {{ range .Pages }}
-        <h4><a href="{{ .RelPermalink }}">{{ .Name }}</h4></a>
-        {{ with .Resources.ByType "image"}}
-        <div class="images">
-          {{ range $img := shuffle . }}
-          {{ $imgwebp := $img.Resize "x180 webp" }}
-          {{ $imgjpg := $img.Resize "x180" }}
-          <picture>
-            <source type="image/webp"
-              srcset="{{ $imgwebp.RelPermalink }}">
-            <img
-              src="{{ $imgjpg.RelPermalink }}"
-              alt=""
-              loading="lazy"
-              decoding="async"
-              width="{{ $imgjpg.Width }}"
-              height="{{ $imgjpg.Height }}">
-          </picture>
-          {{ end }}
-          </div>
-        {{ else }}
-        — No images
-        {{ end }}
-      {{ end }}<br>
-    {{ end }}
-    {{ else }}
-    <p>No sections</p>
-    {{ range .Pages }}
-    <h4>{{ .Name }}</h4>
-    {{ with .Resources.ByType "image"}}
-    <div class="images">
-      {{ range $img := shuffle . }}
-      {{ $imgwebp := $img.Resize "x180 webp" }}
-      {{ $imgjpg := $img.Resize "x180" }}
-      <picture>
-        <source type="image/webp"
-          srcset="{{ $imgwebp.RelPermalink }}">
-        <img
-          src="{{ $imgjpg.RelPermalink }}"
-          alt=""
-          loading="lazy"
-          decoding="async"
-          width="{{ $imgjpg.Width }}"
-          height="{{ $imgjpg.Height }}">
-      </picture>
+      {{ range . }}
+        <h3>{{ .Name }}</h3>
+        {{ range .Pages }}        
+          {{ partial "page-card" . }}
+        {{ end }}<br>
       {{ end }}
-      </div>
-    {{ else }}
-    — No images
+      {{ else }}
+      {{ range .Pages }}
+        {{ partial "page-card" . }}
+      {{ end }}
     {{ end }}
-  {{ end }}<br>
-    {{ end }}
-    
   </main>
 {{ end }}

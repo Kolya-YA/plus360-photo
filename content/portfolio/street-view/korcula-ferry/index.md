@@ -1,7 +1,7 @@
 ---
 date: "2021-09-21"
 title: "Car ferry terminal on Korcula"
-tag: "transport"
+tags: ["transport", "sea", "sunrise"]
 pano360: true
 ---
 
@@ -10,7 +10,7 @@ Car ferry terminal Korcula to Orebić
 
 {{< mPano360
       dir="korcula-ferry"
-      title="Morning on car ferry terminal" 
+      title="Morning on car ferry terminal"
       extLink="https://goo.gl/maps/sNXpTiEHCbMdTj8p9"
       yaw=285
       autoLoad=true

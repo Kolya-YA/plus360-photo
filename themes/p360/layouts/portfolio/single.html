@@ -1,39 +1,43 @@
 {{ define "main" }}
 <section id="main">
-  <h1 id="title">{{ .Title }}</h1>
+  {{ if not .Parent.IsHome }}
+  <div class="back-link">
+    <a href="{{ .Parent.RelPermalink  }}"><— {{ .Parent.Title }}</a>
+  </div>
+  {{ end }}
+  <article id="content">
+    <h1 id="title">{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
   <div>
-        <article id="content">
-           {{ .Content }}
-        </article>
+    {{ with .PrevInSection }}<a class="previous" href="{{.Permalink}}">Prev — {{.Title}}</a>{{ end }}
+    {{ with .NextInSection }}<a class="next" href="{{.Permalink}}">Next — {{.Title}}</a>{{ end }}
   </div>
 </section>
+
 <aside id="meta">
-    <div>
-    <section>
-      <p id="date"> {{ .Date.Format "2.01.2006" }} </p>
-    </section>
-    {{ with .Params.topics }}
-    <ul id="topics">
+  {{with .CurrentSection.Pages }}
+  <section>
+    <ul class="">
       {{ range . }}
-        <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+      {{ if ne . $ }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
       {{ end }}
     </ul>
-    {{ end }}
-    {{ with .Params.tags }}
+  </section>
+  {{ end }}
+      
+  {{ with .Params.tags }}
+  <section>
     <ul id="tags">
       {{ range . }}
-        <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+      <li><a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a></li>
       {{ end }}
     </ul>
-    {{ end }}
-    </div>
-    <div>
-        {{ with .PrevInSection }}
-          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-        {{ with .NextInSection }}
-          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-    </div>
+  </section>
+  {{ end }}
+
+  <section>
+    <p id="date"> {{ .Date.Format "2.01.2006" }} </p>
+  </section>
 </aside>
 {{ end }}
