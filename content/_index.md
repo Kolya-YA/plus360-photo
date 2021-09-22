@@ -10,10 +10,10 @@ pano360: true
 ---
 
 {{< mPano360
-      dir="ferry-korcula"
+      dir="korcula-ferry"
       title="Morning on car ferry terminal"
       extLink="https://goo.gl/maps/sNXpTiEHCbMdTj8p9"
-      yaw=168
+      yaw=285
       autoLoad=true
       author="pano360" >}}
 

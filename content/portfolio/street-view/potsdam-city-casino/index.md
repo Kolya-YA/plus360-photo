@@ -11,7 +11,7 @@ City Casino — Spielhalle in Potsdam
 
 {{< mPano360
       dir="city-casino01"
-      title="City Casino — 01" 
+      title="City Casino — 01"
       extLink="#"
       yaw=265
       autoLoad=true

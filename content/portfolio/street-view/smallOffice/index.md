@@ -10,7 +10,6 @@ pano360: true
 {{< mPano360
       dir="small-office01"
       title="Ein kleines Büro in Berlin 01"
-      extLink="#"
       yaw=265
       pitch=-4
       autoLoad=true
