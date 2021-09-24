@@ -5,7 +5,7 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5em;
+    gap: var(--block-gap);
 
     .categories__item {
       background-color: var(--cards-color);

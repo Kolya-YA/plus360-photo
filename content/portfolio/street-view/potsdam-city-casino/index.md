@@ -1,9 +1,8 @@
 ---
-date: '2021-07-01'
+date: '2021-09-14'
 title: City Casino
 tag: casino
 pano360: true
-lastmod: '2021-09-14T12:58:01.157Z'
 ---
 
 **City Casino — Spielhalle in Potsdam**  
