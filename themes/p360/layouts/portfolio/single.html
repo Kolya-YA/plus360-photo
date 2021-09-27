@@ -8,11 +8,10 @@
   <article id="content">
     <h1 id="title">{{ .Title }}</h1>
     {{ .Content }}
+    
+    {{ with .PrevInSection }}<div><a class="previous" href="{{.Permalink}}">Prev — {{.Title}}</a></div>{{ end }}
+    {{ with .NextInSection }}<div><a class="next" href="{{.Permalink}}">Next — {{.Title}}</a></div>{{ end }}
   </article>
-  <div>
-    {{ with .PrevInSection }}<a class="previous" href="{{.Permalink}}">Prev — {{.Title}}</a>{{ end }}
-    {{ with .NextInSection }}<a class="next" href="{{.Permalink}}">Next — {{.Title}}</a>{{ end }}
-  </div>
 </section>
 
 <aside id="meta">
@@ -27,17 +26,17 @@
   {{ end }}
       
   {{ with .Params.tags }}
-  <section>
-    <ul id="tags">
+  <section class="page-tags">
+    <ul class="page-tags__list" id="tags">
       {{ range . }}
-      <li><a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a></li>
+      <li class="page-tags_item"><a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a></li>
       {{ end }}
     </ul>
   </section>
   {{ end }}
 
-  <section>
-    <p id="date"> {{ .Date.Format "2.01.2006" }} </p>
+  <section class="page-date">
+    <time id="date" daytime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2.01.2006" }}</time>
   </section>
 </aside>
 {{ end }}
