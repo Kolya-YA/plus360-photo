@@ -1,12 +1,12 @@
 ---
-date: "2021-09-21"
-title: "Car ferry terminal on Korcula"
+date: "2021-09-27"
+title: "Fährhafen"
 tags: ["transport", "sea", "sunrise"]
 pano360: true
 ---
 
-Car ferry terminal Korcula to Orebić  
-*Korčula, Croatia*
+**Autofährhafen auf Korcula nach Orebić**  
+*Insel Korčula, Croatia*
 
 {{< mPano360
       dir="korcula-ferry"

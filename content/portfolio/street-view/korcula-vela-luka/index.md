@@ -1,12 +1,14 @@
 ---
-date: '2021-09-22'
-title: 'Ferienhaus auf Korcula'
-tag: 'hotel'
+date: '2021-09-27'
+title: 'Ferienhaus am Meer'
+tags: ['hotel', 'sea']
 pano360: true
 ---
 
+## 360°-Panoramafoto
+
 **Schönes Ferienhaus an der Adria**  
-*Korcula, Croatia*
+*Insel Korcula, Croatia*
 
 {{< mPano360
       dir="korcula-vela-luka"

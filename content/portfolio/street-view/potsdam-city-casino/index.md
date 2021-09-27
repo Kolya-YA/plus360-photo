@@ -1,7 +1,7 @@
 ---
 date: '2021-09-14'
-title: City Casino
-tag: casino
+title: 'Spielhalle'
+tags: ['casino']
 pano360: true
 ---
 
