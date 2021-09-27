@@ -26,7 +26,10 @@
         <li>
           <a {{ if $currentPage.IsMenuCurrent "top" . -}}
             class="menu__link menu__link--current"
-            {{- else }}class="menu__link" href="{{ .URL }}"
+            {{- else if $currentPage.HasMenuCurrent "top" . -}}
+            class="menu__link menu__link--current" href="{{ .URL }}"
+            {{- else -}}
+            class="menu__link" href="{{ .URL }}"
             {{- end }}>{{ .Name }}</a>
         </li>
         {{- end }}
