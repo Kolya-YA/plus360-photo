@@ -1,5 +1,5 @@
 ---
-date: '2021-09-14'
+date: '2021-09-28'
 title: 'Spielhalle'
 tags: ['casino']
 pano360: true
@@ -13,13 +13,15 @@ pano360: true
       title="City Casino 1"
       extLink="#"
       yaw=265
+      pitch=-8
       autoLoad=true
       author="pano360" >}}
 
 {{< mPano360
       dir="city-casino02"
       title="City Casino 2"
-      yaw=250
+      yaw=246
+      pitch=-6
       autoLoad=true
       author="pano360" >}}
 
