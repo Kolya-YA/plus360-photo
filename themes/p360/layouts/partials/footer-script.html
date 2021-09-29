@@ -1,6 +1,9 @@
 {{ if .Params.pano360 -}}
-  <script defer src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+  {{ $pannellumScript := resources.Get "vendor/pannellum/pannellum.js" | minify | fingerprint -}}
+  {{ $pannellumCss := resources.Get "vendor/pannellum/pannellum.css" | minify | fingerprint -}}
+
+  <link rel="stylesheet" href="{{ $pannellumCss.RelPermalink }}"/>
+  <script defer src="{{ $pannellumScript.RelPermalink }}"></script>
 {{ end -}}
 
 {{ $footerScript := resources.Get "js/footer-script.js" | js.Build (dict "target" "es2018") -}}
