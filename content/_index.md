@@ -1,6 +1,7 @@
 ---
 title: "plus360"
 subtitle: "Virtual tours, Googele Street view and interior photography"
+description: "Google Street View Geschäftsfoto, Innen- und Architekturfotografie, Virtuelle Rundgänge für Ihr Unternehmen"
 menu:
   top:
     name: "Homepage"
@@ -9,21 +10,13 @@ menu:
 pano360: true
 ---
 
-{{< mPano360
-      dir="korcula-ferry"
-      title="Morning on car ferry terminal"
-      extLink="https://goo.gl/maps/sNXpTiEHCbMdTj8p9"
-      yaw=285
-      autoLoad=true
-      author="pano360" >}}
-
 ### Unsere Dienstleistungen
 
 - Google Street View Geschäftsfoto
 - Innen- und Architekturfotografie
 - Virtuelle Rundgänge für Ihr Unternehmen
 
-Wir bieten alle unsere Dienstleistungen zu kalkulierbaren Kosten an.
+Wir bieten alle unsere Services zu fairen und günstige Preisen an.
 
 **Ihr Business *plus360* ist gleich Erfolg**
 
@@ -35,8 +28,14 @@ Wir bieten alle unsere Dienstleistungen zu kalkulierbaren Kosten an.
 - Interior and architectural photography
 - Virtual tours for your business
 
-We offer all our services at predictable costs.
+We offer all our services at fair and reasonable prices.
 
-**Comming soon!**
+**Comming soon! Stay tuned!**
 
-***Stay tuned!***
+{{< mPano360
+      dir="korcula-ferry"
+      title="Morning on car ferry terminal"
+      extLink="https://goo.gl/maps/sNXpTiEHCbMdTj8p9"
+      yaw=285
+      autoLoad=true
+      author="pano360" >}}
