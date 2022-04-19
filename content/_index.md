@@ -1,6 +1,7 @@
 ---
+date: "2022-04-19"
 title: "plus360"
-subtitle: "Virtual tours, Googele Street view and interior photography"
+subtitle: "Virtual tours, Google Street view and interior photography"
 description: "Google Street View Geschäftsfoto, Innen- und Architekturfotografie, Virtuelle Rundgänge für Ihr Unternehmen"
 menu:
   top:
