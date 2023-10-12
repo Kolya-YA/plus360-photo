@@ -3,7 +3,7 @@
     <div class="header__top logo-phone">
       <a class="logo-phone__logo logo" href="{{ .Site.BaseURL }}">
         <h1 class="logo__title">
-          <span>{{ .Site.Params.titleWord }}</span>{{ .Site.Params.titleDigit }}
+          <span>{{ .Site.Params.titleWord }}</span>{{ .Site.Params.titleDigit }}{{ with  .Site.Params.department }} – <span>{{ . }}</span>{{ end }}
         </h1>
       </a>
       <a class="header__phone phone" href="tel:{{ .Site.Params.phoneLink }}">

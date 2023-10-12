@@ -1,6 +1,6 @@
 ---
 date: "2022-04-19"
-title: "plus360"
+title: "Foto — plus360"
 subtitle: "Virtual tours, Google Street view and interior photography"
 description: "Google Street View Geschäftsfoto, Innen- und Architekturfotografie, Virtuelle Rundgänge für Ihr Unternehmen"
 menu:
@@ -36,7 +36,7 @@ We offer all our services at fair and reasonable prices.
 {{< mPano360
       dir="korcula-ferry"
       title="Morning on car ferry terminal"
-      extLink="https://goo.gl/maps/sNXpTiEHCbMdTj8p9"
+      extLink="<https://goo.gl/maps/sNXpTiEHCbMdTj8p9>"
       yaw=285
       autoLoad=true
       author="pano360" >}}
